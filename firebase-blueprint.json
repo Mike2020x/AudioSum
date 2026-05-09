@@ -1,0 +1,25 @@
+{
+  "entities": {
+    "Session": {
+      "title": "Interpretation Session",
+      "description": "A recorded session containing transcript and translation",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "The UID of the interpreter" },
+        "title": { "type": "string", "description": "User-provided title for the session" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "transcript": { "type": "string", "description": "The raw captioning transcript" },
+        "translation": { "type": "string", "description": "The AI translated content (if any)" },
+        "language": { "type": "string", "description": "Target translation language" },
+        "notes": { "type": "string", "description": "Interpreter's private notes for training" }
+      },
+      "required": ["userId", "title", "createdAt", "transcript"]
+    }
+  },
+  "firestore": {
+    "/sessions/{sessionId}": {
+      "schema": "Session",
+      "description": "Collection of interpretation sessions"
+    }
+  }
+}

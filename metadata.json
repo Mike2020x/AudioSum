@@ -1,0 +1,6 @@
+{
+  "name": "Audio Sumarizer AI",
+  "description": "Herramienta para grabar audio de reuniones o notas de voz, transcribirlo en tiempo real y generar resúmenes automáticos con IA en español.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["Transcripción de Audio", "Resumen con IA", "Archivo de Sesiones"]
+}
